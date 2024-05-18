@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+    h1{
+      text-align: center;
+      font-size: 100px;
+      text-shadow:4px 2px #bfbcbc;
+     
+    }
+    ul{
+      text-align:center;
+      font-size:40px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    }
+    </style>
+<h1 >List of members</h1>
+
+<h2 style="text-align: center;color: rgb(27, 48, 41);">This is a list of members name<br>
+  By clicking on each name, you can see more information about that person</h2>
+<ul>
+  {% for x in mymembers %}
+    <a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a>
+    <br>
+  {% endfor %}
+</ul>
+
+</table>
+</body>
+</html>
